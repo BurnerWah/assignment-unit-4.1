@@ -64,12 +64,41 @@ console.log(`Test
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
-function getLast(array) {}
+/**
+ * @template T
+ * @param {T[]} array
+ * @returns {T}
+ */
+function getLast(array) {
+  if (array.length > 0) {
+    return array[array.length - 1]
+  }
+  return undefined
+}
+console.log(`Last element of []: ${getLast([])}
+Last element of [1, 2]: ${getLast([1, 2])}`)
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find(value, array) {}
+//
+// tecnically this doesn't include Array.some, but I will just use that for testing
+function find(value, array) {
+  for (const element of array) {
+    if (element === value) {
+      return true
+    }
+  }
+  return false
+}
+{
+  const array = [1, 2, 3, 17, 351]
+  console.log(`Test:
+  ${array} has 3 in it: ${find(3, array) === array.some((x) => x === 3)}
+  ${array} does not have 5 in it: ${
+    find(5, array) === array.some((x) => x === 5)
+  }`)
+}
 
 // ----------------------
 // Stretch Goals

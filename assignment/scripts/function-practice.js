@@ -99,6 +99,7 @@ function find(value, array) {
     find(5, array) === array.some((x) => x === 5)
   }`)
 }
+// i think the console.log test is broken, it always wants one more call than there is
 
 // ----------------------
 // Stretch Goals

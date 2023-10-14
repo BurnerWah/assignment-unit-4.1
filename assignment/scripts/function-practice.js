@@ -106,7 +106,10 @@ function find(value, array) {
 // ----------------------
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
-function isFirstLetter(letter, string) {}
+function isFirstLetter(letter, string) {
+  return letter === string[0]
+}
+console.log(`First letter of apple is a: ${isFirstLetter("a", "apple")}`)
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll() {
@@ -119,7 +122,21 @@ function sumAll() {
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-function allPositive() {}
+/**
+ * @param {number[]} array
+ * @returns {number[]}
+ */
+function allPositive(array) {
+  // my preferred way of doing this
+  // return array.filter((x) => x > 0)
+  const positive = []
+  for (const n of array) {
+    if (n > 0) {
+      positive.push(n)
+    }
+  }
+  return positive
+}
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it

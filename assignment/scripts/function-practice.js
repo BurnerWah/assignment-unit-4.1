@@ -112,11 +112,18 @@ function isFirstLetter(letter, string) {
 console.log(`First letter of apple is a: ${isFirstLetter("a", "apple")}`)
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll() {
+/**
+ * @param {number[]} array
+ * @returns {number}
+ */
+function sumAll(array) {
+  // my preferred way of doing this
+  // return array.reduce((acc, add) => acc + add)
   let sum = 0
-  // TODO: loop to add items
-
-  // TODO: return the sum
+  for (const x of array) {
+    sum += x
+  }
+  return sum
 }
 
 // 10. Function to return a new array of all positive (greater than zero)

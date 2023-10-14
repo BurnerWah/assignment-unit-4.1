@@ -125,6 +125,7 @@ function sumAll(array) {
   return sum
 }
 console.log(`Sum of [1, 2, -3, 4] === 4: ${sumAll([1, 2, -3, 4]) === 4}`)
+console.log(`Sum of [-1] === -1: ${sumAll([-1]) === -1}`)
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
@@ -145,6 +146,7 @@ function allPositive(array) {
   return positive
 }
 console.log(`Positives in [1, 2, -3]: ${allPositive([1, 2, -3])}`)
+console.log(`Positives in [-2]: ${allPositive[-2]}`)
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it

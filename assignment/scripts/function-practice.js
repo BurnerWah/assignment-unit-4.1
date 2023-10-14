@@ -99,7 +99,6 @@ function find(value, array) {
     find(5, array) === array.some((x) => x === 5)
   }`)
 }
-// i think the console.log test is broken, it always wants one more call than there is
 
 // ----------------------
 // Stretch Goals
@@ -125,6 +124,7 @@ function sumAll(array) {
   }
   return sum
 }
+console.log(`Sum of [1, 2, -3, 4] === 4: ${sumAll([1, 2, -3, 4]) === 4}`)
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
@@ -144,6 +144,7 @@ function allPositive(array) {
   }
   return positive
 }
+console.log(`Positives in [1, 2, -3]: ${allPositive([1, 2, -3])}`)
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
